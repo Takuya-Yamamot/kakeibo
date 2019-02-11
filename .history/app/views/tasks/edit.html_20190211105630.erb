@@ -1,0 +1,11 @@
+<h1>私の家計簿</h1>
+<%= form_for(@task) do |f|%>
+    <div><%= f.label :date %></div>
+    <div><%= f.date_field :date %></div>
+    <div><%= f.label :place %></div>
+    <div><%= f.text_field :place %></div>
+    <div><%= f.label :price %></div>
+    <div><%= f.text_field :price %></div>
+    <div><%= f.submit %></div>
+<% end %>
+<%= link_to 'Back', accounts_path%>
