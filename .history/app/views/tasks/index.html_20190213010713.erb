@@ -1,0 +1,27 @@
+<h1>2019家計簿</h1>
+<table>
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>品目</th>
+      <th>場所</th>
+      <th>値段</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.date %></td>
+        <td><%= task.title %></td>
+        <td><%= task.place %></td>
+        <td><%= task.price %></td>
+        <td><%= task.description %></td>
+        <td><%= link_to '編集', edit_task_path(task) %></td>
+        <td><%= link_to '削除', task_path(task), method: :delete, data: {confirm: "本当に削除しますか？"} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<button><%= link_to '追加', new_task_path%></button>
+<button><%= link_to '合計', tasks_sum_path %></button>

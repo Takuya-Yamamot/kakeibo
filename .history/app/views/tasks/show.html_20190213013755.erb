@@ -1,0 +1,56 @@
+<h1>2019家計簿-合計</h1>
+<h4>1月</h4>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">日付</th>
+      <th scope="col">品目</th>
+      <th scope="col">場所</th>
+      <th scope="col">値段</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |january| %>
+      <tr>
+        <td><%= january.date %></td>
+        <td><%= january.title %></td>
+        <td><%= january.place %></td>
+        <td><%= january.price %></td>
+        <td><%= link_to '編集', edit_task_path(january) %></td>
+        <td><%= link_to '削除', task_path(january), method: :delete, data: {confirm: "本当に削除しますか？"} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>合計<%= @sum %></p>
+<%= link_to '戻る', tasks_path%>
+<%= link_to '追加', new_task_path%>
+
+
+
+<h4>2月</h4>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">日付</th>
+      <th scope="col">品目</th>
+      <th scope="col">場所</th>
+      <th scope="col">値段</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasksFeb.each do |task| %>
+      <tr>
+        <td><%= task.date %></td>
+        <td><%= task.title %></td>
+        <td><%= task.place %></td>
+        <td><%= task.price %></td>
+        <td><%= link_to '編集', edit_task_path(task) %></td>
+        <td><%= link_to '削除', task_path(task), method: :delete, data: {confirm: "本当に削除しますか？"} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>合計<%= @sumFeb %></p>
+<%= link_to '戻る', tasks_path%>
+<%= link_to '追加', new_task_path%>

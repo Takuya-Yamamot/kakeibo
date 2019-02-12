@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      task:
+      date: 日付
+      title: 品目
+      place: 場所
+      price: 値段
