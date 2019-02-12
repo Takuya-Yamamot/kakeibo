@@ -1,0 +1,15 @@
+<h1>私の家計簿</h1>
+<%= form_for(@task) do |f|%>
+    <div><%= f.label :date %></div>
+    <div><%= f.date_field :date %></div>
+    <div><%= f.label :title %></div>
+    <div><%= f.text_field :title %></div>
+    <div><%= f.label :place %></div>
+    <div><%= f.text_field :place %></div>
+    <div><%= f.label :price %></div>
+    <div><%= f.text_field :price %></div>
+    <div><%= f.label :description %></div>
+    <div><%= f.text_field :description %></div>
+    <div><%= f.submit_tag "投稿" %></div>
+<% end %>
+<%= link_to '確認', tasks_path%>
