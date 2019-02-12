@@ -148,13 +148,13 @@ AUTOCONF = ${SHELL} /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/ffi-1.10.
 AUTOHEADER = ${SHELL} /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/ffi-1.10.0/ext/ffi_c/libffi/missing autoheader
 AUTOMAKE = ${SHELL} /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/ffi-1.10.0/ext/ffi_c/libffi/missing automake-1.15
 AWK = awk
-CC = gcc
-CCAS = gcc
+CC = clang
+CCAS = clang
 CCASDEPMODE = depmode=none
 CCASFLAGS = 
 CCDEPMODE = depmode=none
 CFLAGS =  -Wall -fexceptions
-CPP = gcc -E
+CPP = clang -E
 CPPFLAGS = 
 CXX = g++
 CXXCPP = g++ -E
@@ -225,7 +225,7 @@ abs_srcdir = /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/ffi-1.10.0/ext/f
 abs_top_builddir = /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-darwin18
 abs_top_srcdir = /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/ffi-1.10.0/ext/ffi_c/libffi
 ac_ct_AR = ar
-ac_ct_CC = gcc
+ac_ct_CC = clang
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
 am__include = include

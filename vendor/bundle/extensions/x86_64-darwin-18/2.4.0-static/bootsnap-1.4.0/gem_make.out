@@ -1,0 +1,15 @@
+current directory: /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/bootsnap-1.4.0/ext/bootsnap
+/Users/takuya/.rbenv/versions/2.4.4/bin/ruby -r ./siteconf20190212-97535-4x8x90.rb extconf.rb
+creating Makefile
+
+current directory: /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/bootsnap-1.4.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/bootsnap-1.4.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/takuya/prese/kakeibo_app/vendor/bundle/gems/bootsnap-1.4.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20190212-97535-1a3kvtd/bootsnap
