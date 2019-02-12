@@ -10,13 +10,13 @@
         </ul>
     <% end %>
     <div><%= f.label :'日付*' %></div>
-    <div class="form-group"><%=  f.date_field  :date, class: "form-control" %></div>
+    <div class="form-group"><%= f.date_field :date, class: "form-control" %></div>
     <div><%= f.label :'品目' %></div>
     <div class="form-group"><%= f.text_field :title, class: "form-control" %></div>
     <div><%= f.label :'場所' %></div>
     <div class="form-group"><%= f.text_field :place, class: "form-control" %></div>
     <div><%= f.label :'値段* (半角数字)' %></div>
-    <div class="input-group mb-3" >
+    <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text">¥</span>
         </div>
@@ -28,3 +28,9 @@
 </div>
 <% end %>
 </div>
+
+<script>
+  $(document).ready(function () {
+    $('#calc').calculator().draggable();
+  });
+</script>
