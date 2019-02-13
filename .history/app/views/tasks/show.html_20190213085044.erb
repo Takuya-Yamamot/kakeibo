@@ -1,10 +1,10 @@
 <h1 style="padding:15px">ざっくり家計簿 <span class="badge badge-primary" >2019</span></h1>
 
 <div style="padding-top:20px">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#month1" aria-expanded="false" aria-controls="month1">
+  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#month" aria-expanded="false" aria-controls="month">
   1月
   </button>
-  <div class="collapse" id="month1">
+  <div class="collapse" id="month">
     <div class="border p-3">
       <table class="table">
         <thead class="thead-dark">
@@ -68,9 +68,4 @@
       <button button type="button" class="btn btn-light"><%= link_to '追加', new_task_path%></button>
     </div>
   </div>
-</div>
-
-<div style="padding-top:20px">
-  <button button type="button" class="btn btn-light"><%= link_to '戻る', tasks_path%></button>
-  <button button type="button" class="btn btn-light"><%= link_to '追加', new_task_path%></button>
 </div>
