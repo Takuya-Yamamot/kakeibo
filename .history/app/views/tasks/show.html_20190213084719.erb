@@ -1,10 +1,10 @@
 <h1 style="padding:15px">ざっくり家計簿 <span class="badge badge-primary" >2019</span></h1>
 
 <div style="padding-top:20px">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#month1" aria-expanded="false" aria-controls="month1">
+  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   1月
   </button>
-  <div class="collapse" id="month1">
+  <div class="collapse" id="collapseExample">
     <div class="border p-3">
       <table class="table">
         <thead class="thead-dark">
@@ -36,41 +36,30 @@
 </div>
 
 <div style="padding-top:20px">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#month" aria-expanded="false" aria-controls="month">
-  2月
-  </button>
-  <div class="collapse" id="month">
-    <div class="border p-3">
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">日付</th>
-            <th scope="col">品目</th>
-            <th scope="col">場所</th>
-            <th scope="col">値段</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @tasksFeb.each do |task| %>
-            <tr>
-              <td><%= task.date %></td>
-              <td><%= task.title %></td>
-              <td><%= task.place %></td>
-              <td><%= task.price %></td>
-              <td><button button type="button" class="btn btn-light"><%= link_to '編集', edit_task_path(task) %></button></td>
-              <td><button button type="button" class="btn btn-light"><%= link_to '削除', task_path(task), method: :delete, data: {confirm: "本当に削除しますか？"} %></button></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <p>合計 <%= @sumFeb %>円</p>
-      <button button type="button" class="btn btn-light"><%= link_to '戻る', tasks_path%></button>
-      <button button type="button" class="btn btn-light"><%= link_to '追加', new_task_path%></button>
-    </div>
-  </div>
-</div>
-
-<div style="padding-top:20px">
+  <h4>2月</h4>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">日付</th>
+        <th scope="col">品目</th>
+        <th scope="col">場所</th>
+        <th scope="col">値段</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasksFeb.each do |task| %>
+        <tr>
+          <td><%= task.date %></td>
+          <td><%= task.title %></td>
+          <td><%= task.place %></td>
+          <td><%= task.price %></td>
+          <td><button button type="button" class="btn btn-light"><%= link_to '編集', edit_task_path(task) %></button></td>
+          <td><button button type="button" class="btn btn-light"><%= link_to '削除', task_path(task), method: :delete, data: {confirm: "本当に削除しますか？"} %></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p>合計 <%= @sumFeb %>円</p>
   <button button type="button" class="btn btn-light"><%= link_to '戻る', tasks_path%></button>
   <button button type="button" class="btn btn-light"><%= link_to '追加', new_task_path%></button>
 </div>
